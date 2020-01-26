@@ -1,0 +1,29 @@
+% !TEX program = xelatex
+\documentclass{fefu}
+\usepackage{subfiles}
+% \setmainlanguage[babelshorthands=true]{russian}
+\newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]
+
+% All necessary packages must be defined here
+\usepackage{float}
+\usepackage{minted}
+\usepackage{dirtree}
+\usepackage{multirow}
+\usepackage{textcomp}
+
+\renewcommand{\listingscaption}{Код программы}
+
+\author{Поликутин Евгений Юрьевич}
+\setgroup{М9119-09.04.01иибд}
+\setsupervisor{Ринчино Андрей Львович}{доцент}
+
+\begin{document}
+    \maketitle[2]{thesis}
+    \maketableofcontents
+    \section*{Введение}
+    \subfile{subfiles/introduction.tex}
+    \newpage
+    \bibliographystyle{ugost2008ls}
+    \bibliography{references.bib}
+\end{document}
+
