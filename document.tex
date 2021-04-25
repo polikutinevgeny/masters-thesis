@@ -10,21 +10,70 @@
 \usepackage{dirtree}
 \usepackage{multirow}
 \usepackage{textcomp}
+\usepackage[
+	xindy={glsnumbers=false}, 
+	nonumberlist, 
+	nopostdot, 
+	nogroupskip,
+	% section=subsection,
+	numberline=false
+	]{glossaries}
 
 \renewcommand{\listingscaption}{Код программы}
 
+\addto\captionsrussian{\renewcommand{\contentsname}{Оглавление}}
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+
+\setglossarystyle{index}
+\renewcommand*{\glsnamefont}[1]{\textmd{#1} ---}
+\makeatletter
+\renewcommand{\@idxitem}{\parindent1.25cm\par\indent}
+\makeatother
+\makeglossaries
+
+\newglossaryentry{abtesting}
+{
+	name=A/B тестирование,
+	description={рандомизированный эксперимент, который проводится путем разделения пользователей на 2 (или более) группы, представления им различных вариантов продукта и сравнением результатов с помощью заранее выбранной метрики}
+}
+
+\newglossaryentry{onpremises}
+{
+	name=on-premises,
+	description={программное обеспечение, которое разворачивается на оборудовании, принадлежащем компании}
+}
+
 \author{Поликутин Евгений Юрьевич}
 \setgroup{М9119-09.04.01иибд}
+\setfaculty{09.04.01 Информатика и вычислительная техника}
+\setprogram{Искусственный интеллект и большие данные}
 \setsupervisor{Ринчино Андрей Львович}{доцент}
+\setdirector{Мирин Илья Геннадьевич}{ТЕСТ}
+\setsecretary{Сапрыкина Елена Валерьевна}{ТЕСТ}
+\setschool{ШКОЛА ЦИФРОВОЙ ЭКОНОМИКИ}
+\title{Система автоматизированного A/B тестирования}
 
 \begin{document}
-    %\maketitle[2]{thesis}
+    \maketitle{thesis}
+    %\makethesistitlebackside
     \section*{Аннотация}
     \subfile{subfiles/annotation.tex}
     \newpage
     \maketableofcontents
     \section*{Введение}
     \subfile{subfiles/introduction.tex}
+    \newpage
+    \printglossary[type=main,title={Глоссарий}]
+    \newpage
+    \section{A/B тестирование: обзор и постановка задачи}
+    \subfile{subfiles/analysis.tex}
+    \newpage
+    \section{Спецификации системы}
+    \newpage
+    \section{Подробности реализации и результаты внедрения}
+    \newpage
+    \section*{Заключение}
     \newpage
     \bibliographystyle{ugost2008ls}
     \bibliography{references.bib}

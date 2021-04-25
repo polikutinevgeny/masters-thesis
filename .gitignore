@@ -282,3 +282,5 @@ TSWLatexianTemp*
 
 # Ignore output pdf
 *.pdf
+
+*.ist
