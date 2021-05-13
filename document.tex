@@ -5,6 +5,7 @@
 \newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]
 
 % All necessary packages must be defined here
+\usepackage{mathtools}
 \usepackage{float}
 \usepackage{minted}
 \usepackage{dirtree}
@@ -21,10 +22,6 @@
 
 \renewcommand{\listingscaption}{Код программы}
 
-\addto\captionsrussian{\renewcommand{\contentsname}{Оглавление}}
-\renewcommand{\cfttoctitlefont}{\hfill\bfseries}
-\renewcommand{\cftaftertoctitle}{\hfill}
-
 \setglossarystyle{index}
 \renewcommand*{\glsnamefont}[1]{\textmd{#1} ---}
 \makeatletter
@@ -35,7 +32,7 @@
 \newglossaryentry{abtesting}
 {
 	name=A/B тестирование,
-	description={рандомизированный эксперимент, который проводится путем разделения пользователей на 2 (или более) группы, представления им различных вариантов продукта и сравнением результатов с помощью заранее выбранной метрики}
+	description={процесс проведения рандомизированного эксперимента путем разделения пользователей на 2 (или более) группы, представления им различных вариантов продукта и сравнением результатов с помощью заранее выбранной метрики}
 }
 
 \newglossaryentry{onpremises}
@@ -51,15 +48,15 @@
 \setsupervisor{Ринчино Андрей Львович}{доцент}
 \setdirector{Мирин Илья Геннадьевич}{ТЕСТ}
 \setsecretary{Сапрыкина Елена Валерьевна}{ТЕСТ}
-\setschool{ШКОЛА ЦИФРОВОЙ ЭКОНОМИКИ}
+\setschool{цифровой экономики}
 \title{Система автоматизированного A/B тестирования}
 
 \begin{document}
     \maketitle{thesis}
-    %\makethesistitlebackside
-    \section*{Аннотация}
-    \subfile{subfiles/annotation.tex}
-    \newpage
+    \makethesistitlebackside
+    \begin{abstract}
+    	\subfile{subfiles/annotation.tex}
+    \end{abstract}
     \maketableofcontents
     \section*{Введение}
     \subfile{subfiles/introduction.tex}
