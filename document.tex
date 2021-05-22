@@ -19,8 +19,14 @@
 	% section=subsection,
 	numberline=false
 	]{glossaries}
+\usepackage{tabu}
+\usepackage[
+	separate-uncertainty = true,
+	multi-part-units = repeat
+	]{siunitx}
 
 \renewcommand{\listingscaption}{Код программы}
+\newcommand*\rot{\rotatebox{90}}
 
 \setglossarystyle{index}
 \renewcommand*{\glsnamefont}[1]{\textmd{#1} ---}
@@ -67,6 +73,7 @@
     \subfile{subfiles/analysis.tex}
     \newpage
     \section{Спецификации системы}
+    \subfile{subfiles/specifications.tex}
     \newpage
     \section{Подробности реализации и результаты внедрения}
     \newpage
