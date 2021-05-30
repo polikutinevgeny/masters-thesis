@@ -48,6 +48,9 @@
 	description={программное обеспечение, которое разворачивается на оборудовании, принадлежащем компании}
 }
 
+\newglossaryentry{saas}{name={SaaS},description={программное обеспечение, которое предоставляется по регулярной подписке, обычно расположенное на серверах компании-разработчика}}
+\newglossaryentry{ctr}{name={CTR},description={метрика отношения количества кликов к количеству просмотров}}
+
 \author{Поликутин Евгений Юрьевич}
 \setgroup{М9119-09.04.01иибд}
 \setfaculty{09.04.01 Информатика и вычислительная техника}
@@ -59,6 +62,11 @@
 \setdeputy{Сапрыкина Елена Валерьевна}{к.э.н.}
 \setschool{цифровой экономики}
 \title{Система автоматизированного A/B тестирования}
+
+\urlstyle{same}
+
+\addbibresource{references.bib}
+%\newcommand{\macro}[2]{\texttt{\textbackslash#1\{#2\}}}
 
 \begin{document}
     \maketitle{thesis}
@@ -82,8 +90,10 @@
     \subfile{subfiles/implementation.tex}
     \newpage
     \section*{Заключение}
+    \subfile{subfiles/conclusion.tex}
     \newpage
-    \bibliographystyle{ugost2008ls}
-    \bibliography{references.bib}
+    \printbibliography
+%    \bibliographystyle{ugost2008ls}
+%    \bibliography{references.bib}
 \end{document}
 
