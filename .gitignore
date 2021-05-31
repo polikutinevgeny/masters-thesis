@@ -281,6 +281,6 @@ TSWLatexianTemp*
 #*Notes.bib
 
 # Ignore output pdf
-*.pdf
+document.pdf
 
 *.ist
