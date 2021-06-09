@@ -56,26 +56,33 @@
 \setgroup{М9119-09.04.01иибд}
 \setfaculty{09.04.01 Информатика и вычислительная техника}
 \setprogram{Искусственный интеллект и большие данные}
-\setsupervisor{руководитель руководитель руководитель}{степень}
+\setsupervisor{}{}
 \setdirector{Мирин Илья Геннадьевич}{}
 \setsecretary{Сапрыкина Елена Валерьевна}{}
 \setconsultant{Олейников Игорь Сергеевич}{}
 \setdeputy{Сапрыкина Елена Валерьевна}{к.э.н.}
 \setschool{цифровой экономики}
 \title{Система автоматизированного A/B тестирования}
+\setpracticetitle{Преддипломная практика}
+\setplace{Школе Цифровой Экономики}
 
 \urlstyle{same}
 
 \addbibresource{references.bib}
 %\newcommand{\macro}[2]{\texttt{\textbackslash#1\{#2\}}}
 
+\addto\captionsrussian{%
+	\renewcommand{\figurename}{Рисунок}%
+}
+
 \begin{document}
+	%\maketitle{practice}
     \maketitle{thesis}
     \makethesistitlebackside
     \begin{abstract}
     	\subfile{subfiles/annotation.tex}
     \end{abstract}
-    \maketableofcontents
+    \tableofcontents
     \section*{Введение}
     \subfile{subfiles/introduction.tex}
     \newpage
