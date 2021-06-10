@@ -306,12 +306,12 @@
 					Koomen, L. Pekelis, D. Walsh	
 				} --- mixture sequential probability ratio test}
 			\begin{equation}
-				\Lambda_{n}^{H,\theta_0}=\int_{\Theta}\prod\limits_{m=1}^{n}\frac{f_{\theta}(X_m)}{f_{\theta_0}(X_m)}h(\theta)\mathrm{d}\theta
+				\begin{aligned}
+					\Lambda_{n}^{H,\theta_0}=\int_{\Theta}\prod\limits_{m=1}^{n}\frac{f_{\theta}(X_m)}{f_{\theta_0}(X_m)}h(\theta)\mathrm{d}\theta\\
+					p_0=1;\;p_n=\min\{p_{n-1},1/\Lambda_{n}^{H,\theta_0}\}
+				\end{aligned}
 			\end{equation}
-			\begin{equation}
-				p_0=1;\;p_n=\min\{p_{n-1},1/\Lambda_{n}^{H,\theta_0}\}
-			\end{equation}
-			\vspace*{-1cm}
+			\vspace*{-0.5cm}
 			\begin{itemize}
 				\item $\theta$, $\theta_0$ --- целевой параметр, например, разница средних и его значение при нулевой гипотезе;
 				\item $f_{\theta}$ --- функция правдоподобия параметра $\theta$;
@@ -332,13 +332,11 @@
 		\begin{block}{mSPRT для разности средних нормального распределения}
 			\begin{equation}
 				\label{eqn:mSPRT}
-				\Lambda_{n}^{H} = \sqrt{\frac{2\sigma^2}{2\sigma^2 +n\tau^2}} \exp\left\{\frac{n^2\tau^2 (\overline{Y}_n-\overline{X}_n)^2}{4\sigma^2(2\sigma^2+n\tau^2)}\right\}
+				\begin{aligned}
+					\Lambda_{n}^{H} = \sqrt{\frac{2\sigma^2}{2\sigma^2 +n\tau^2}} \exp\left\{\frac{n^2\tau^2 (\overline{Y}_n-\overline{X}_n)^2}{4\sigma^2(2\sigma^2+n\tau^2)}\right\}\\
+					p_0=1;\;p_n=\min\{p_{n-1},1/\Lambda_{n}^{H}\}
+				\end{aligned}
 			\end{equation}
-			\begin{equation}
-				p_0=1;\;p_n=\min\{p_{n-1},1/\Lambda_{n}^{H}\}
-			\end{equation}
-			%\vspace*{-1cm}
-			Где:
 			\vspace*{-0.5cm}
 			\begin{itemize}
 				\item $\sigma$ --- стандартное отклонение объединённой выборки;
@@ -388,16 +386,12 @@ Serdyukov
 			\smallskip
 			\fi
 			\begin{equation}
-				\tilde{Y}=F(X)
-			\end{equation}
-			\begin{equation}
-				\overset{\triangle}{Y}=Y-\tilde{Y}
-			\end{equation}
-			\begin{equation}
-				\text{ATE}(\overset{\triangle}{Y})=\text{ATE}(Y)
-			\end{equation}
-			\begin{equation}
-				\text{var}(\overset{\triangle}{Y})=\text{var}(Y)-\text{var}(\tilde{Y})
+				\begin{aligned}
+					\tilde{Y}&=F(X)\\
+					\overset{\triangle}{Y}&=Y-\tilde{Y}\\
+					\text{ATE}(\overset{\triangle}{Y})&=\text{ATE}(Y)\\
+					\text{var}(\overset{\triangle}{Y})&=\text{var}(Y)-\text{var}(\tilde{Y})
+				\end{aligned}
 			\end{equation}
 			ATE --- средний эффект (разница в метрике между когортами).
 		\end{block}
