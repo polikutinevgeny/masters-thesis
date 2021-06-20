@@ -23,6 +23,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning,decorations,calc}
 \graphicspath{{./images/}}
+\usepackage{makecell}
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
@@ -94,7 +95,7 @@
 }
 
 \setbeamertemplate{note page}[plain]
-\setbeameroption{show notes on second screen=right}
+%\setbeameroption{show notes on second screen=right}
 %\setbeameroption{show only notes}
 
 \newif\ifmetropolis
@@ -198,33 +199,33 @@
     	\color{black}
 		\begin{table}[h]
 			\centering
-			\begin{tabular}{|p{4cm}|c|c|c|c|c|c|c|c|c|}
+			\begin{tabular}{|p{4cm}|c|c|c|c|c|c|c|c|c|c|}
 			\hline
-			& \rot{Firebase\ } & \rot{Optimizely\ } & \rot{VWO\ } & \rot{Evergage\ } & \rot{Taplytics\ } & \rot{Countly\ } & \rot{Matomo\ } & \rot{Planout\ } & \rot{Sixpack\ }\\
+			& \rot{Firebase\ } & \rot{Optimizely\ } & \rot{VWO\ } & \rot{Evergage\ } & \rot{Taplytics\ } & \rot{Countly\ } & \rot{Matomo\ } & \rot{Planout\ } & \rot{Sixpack\ } & \rot{\shortstack{Разработанная\\ система}\ } \\
 			\hline
 			мобильные приложения + веб & 
-			\textpm & + & + & + & + & + & + & \textminus & \textminus \\
+			\textpm & + & + & + & + & + & + & \textminus & \textminus & + \\
 			\hline
 			хостинг on-premises &
-			\textminus & \textminus & \textminus & \textminus & + & + & + & + & + \\
+			\textminus & \textminus & \textminus & \textminus & + & + & + & + & + & + \\
 			\hline
 			анализ сырых данных &
-			+ & \textpm & \textpm & + & + & \textpm & \textpm & \textminus & \textminus \\
+			+ & \textpm & \textpm & + & + & \textpm & \textpm & \textminus & \textminus & + \\
 			\hline
 			гибкая настройка метрик &
-			\textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus \\
+			\textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & + \\
 			\hline 
 			корректный непрерывный мониторинг тестов &
-			+ & + & + & + & + & + & \textminus & \textminus & \textminus \\
+			+ & + & + & + & + & + & \textminus & \textminus & \textminus & + \\
 			\hline
 			самостоятельная доработка системы &
-			\textminus & \textminus & \textminus & \textminus & \textminus & + & + & + & + \\
+			\textminus & \textminus & \textminus & \textminus & \textminus & + & + & + & + & + \\
 			\hline
 			методики уменьшения дисперсии &
-			\textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus \\
+			\textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & + \\
 			\hline
 			работа с существующими базами данных &
-			\textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus \\
+			\textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & \textminus & + \\
 			\hline
 			\end{tabular}
 			\caption{Сравнительный анализ аналогичных решений}
