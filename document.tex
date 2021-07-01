@@ -11,14 +11,6 @@
 \usepackage{dirtree}
 \usepackage{multirow}
 \usepackage{textcomp}
-\usepackage[
-	xindy={glsnumbers=false}, 
-	nonumberlist, 
-	nopostdot, 
-	nogroupskip,
-	% section=subsection,
-	numberline=false
-	]{glossaries}
 \usepackage{tabu}
 \usepackage[
 	separate-uncertainty = true,
@@ -79,6 +71,20 @@
 	%\maketitle{practice}
     \maketitle{thesis}
     \makethesistitlebackside
+    \begin{thesistask}[Поликутину Евгению Юрьевичу]{24.12.20}{124-01-03-18}{05.07.21}{23.12.20}
+    	\taskitem \uline{разработать и внедрить на проекте <<Дром>> систему автоматизированного A/B тестирования}
+    	\taskitem \uline{
+    		-исследование существующих продуктов для A/B тестирования\\
+    		-исследование существующих статистических методов, применяемых для A/B тестирования\\
+    		-разработка системы, автоматизирующей A/B тестирование на проекте <<Дром>>\\
+    		-внедрение разработанной системы в бизнес-процесс проекта <<Дром>>
+    	}
+    	\taskitem \uline{
+    		-Johari R., Pekelis L., Walsh D. Always Valid Inference: Bringing Sequential Analysis to A/B Testing (2019)\\
+    		-Johari R., Koomen. P., Pekelis L., Walsh D. Peeking at A/B Tests: Why It Matters, and What to Do about It (2017)\\
+    		-Kohavi R., Tang D., Xu Y. Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing (2020)
+    	}
+    \end{thesistask}
     \begin{abstract}
     	\subfile{subfiles/annotation.tex}
     \end{abstract}
@@ -101,7 +107,12 @@
     \subfile{subfiles/conclusion.tex}
     \newpage
     \printbibliography
-%    \bibliographystyle{ugost2008ls}
-%    \bibliography{references.bib}
+    \newpage
+    \begin{supervisorreview}[Поликутина Евгения Юрьевича]{отлично}{}{}
+    	ОТЗЫВ
+    \end{supervisorreview}
+    \begin{review}[Поликутина Евгения Юрьевича]{отлично}{}
+    	РЕЦЕНЗИЯ
+    \end{review}
 \end{document}
 
